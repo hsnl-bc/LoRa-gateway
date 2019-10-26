@@ -1,17 +1,19 @@
 # LoRa-gateway
 
-## Example's Environment
+## Test Environment
+
 **Module**: GL6509
 
 **Platform**: Arduino
-## Data Formating Rules
+
+## Data Command
 ### Air Temperature & Humidity
 空氣溫溼度
 #### Payload
 ```
 A1000{temperture}{humitdity}
 ```
-#### Example
+#### Usage
 **Data command**: *ATX+DTX=length*
 
 **Temperature**: 25°C, length=2
@@ -22,7 +24,7 @@ A1000{temperture}{humitdity}
 ```
 AT+DTX=11,"A1000255099"
 ```
-> Arduino Concat Code
+> Concatenate Code
 ```
 String temperature="25";
 String humidity="5099";
@@ -35,7 +37,7 @@ String command="AT+DTX=11,\"A1000"+temperature+humidity+"\"";
 ```
 S10{temperture}{humitdity}
 ```
-#### Example
+#### Usage
 **Data command**: *ATX+DTX=length*
 
 **Temperature**: 25.88°C, length=4
@@ -46,13 +48,13 @@ S10{temperture}{humitdity}
 ```
 AT+DTX=11,"S1025885099"
 ```
-> Arduino Concat Code
+> Concatenate Code
 ```
 String temperature="2588";
 String humidity="5099";
 String command="AT+DTX=11,\"S10"+temperature+humidity+"\"";
 ```
-***If data length=5 (Not Tested)***
+***If humidity data length=5 (Not Tested)***
 
 Change `S10` to `F1`
 
@@ -62,23 +64,24 @@ Change `S10` to `F1`
 ```
 B10000{voltage}
 ```
-#### Example
+#### Usage
 **Data command**: *ATX+DTX=length*
 
-**Voltage**: 12.50°C, length=5 (01250)
+**Voltage**: 12.50v, length=5 (12.50)
 
 > String
 ```
-AT+DTX=11,"B1000001250"
+AT+DTX=11,"B1000012.50"
 ```
-> Arduino Concat Code
+> Concatenate Code
 ```
-String voltage="01250";
+String voltage="12.50";
 String command="AT+DTX=11,\"B10000"+voltage+"\"";
 ```
 
 ### Lux
 光照度
-
+***Not Finished***
 ### EC
 土壤電導度
+***Not Finished***
