@@ -14,7 +14,7 @@
 A1000{temperture}{humitdity}
 ```
 #### Usage
-**Data command**: *ATX+DTX=length*
+**Data command**: *ATX+DTX=payload's length*
 
 **Temperature**: 25°C, length=2
 
@@ -38,7 +38,7 @@ String command="AT+DTX=11,\"A1000"+temperature+humidity+"\"";
 S10{temperture}{humitdity}
 ```
 #### Usage
-**Data command**: *ATX+DTX=length*
+**Data command**: *ATX+DTX=payload's length*
 
 **Temperature**: 25.88°C, length=4
 
@@ -65,7 +65,7 @@ Change `S10` to `F1`
 B10000{voltage}
 ```
 #### Usage
-**Data command**: *ATX+DTX=length*
+**Data command**: *ATX+DTX=payload's length*
 
 **Voltage**: 12.50v, length=5 (12.50)
 
